@@ -10,5 +10,11 @@ library(shiny)
 # It should return a rendered plot
 shinyServer(function(input, output) {
   # Save a 'scatter' property which is a renderPlot object (that renders a scatterplot)
-  
+  output$scatterPlot <- renderPlot({
+    x <- rnorm(input$num)
+    y <- rnorm(input$num)
+    return(plot(x, y, color = input$color))
+    
+  })
 })
+
