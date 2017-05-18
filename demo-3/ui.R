@@ -3,7 +3,7 @@ shinyUI(fluidPage(
   
   # Radio buttons
   radioButtons("color", label = "Color",
-               choices = list("Green" = 'green', "Blue" = 'blue'), 
+               choices = list("Super Cool Green" = 'green', "Sky Blue" = 'blue'), 
                selected = 'green'),
   plotOutput('histogram')
 ))
